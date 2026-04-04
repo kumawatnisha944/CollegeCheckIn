@@ -1,0 +1,235 @@
+.banner {
+  background: white;
+  color: rgb(8, 8, 8);
+  padding: 50px 0;
+  position: relative;
+  overflow: visible;   /* 👈 CHANGE THIS */
+  margin-top: 0px;  
+}
+
+/* LEFT */
+.banner-left h1 {
+  font-size: 42px;
+  font-weight: 600;
+  line-height: 1;
+}
+.logo-img {
+  height: 70px;   /* 👈 isko kam ya zyada adjust kar sakti ho */
+  width: auto;
+  object-fit: contain;
+}
+.italic {
+  font-style: italic;
+  color: #369ed2;
+}
+
+.logo-text {
+  font-size: 40px;
+  font-weight: bold;
+  color: #044E72;
+}
+
+.logo-text span {
+  color: #044E72;
+}
+
+.naac {
+  margin-top: 15px;
+  color: #044E72;
+  font-size: 14px;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+/* TIMER */
+.timer {
+  margin-top: 25px;
+  color:white;
+}
+
+.timer-title {
+  color: black;
+   margin-top: 10px;
+}
+
+.time-box {
+  display: flex;
+  gap: 20px;
+  margin-top: 10px;
+}
+.time-box p {
+  font-size: 12px;
+  margin: 0; 
+   /* 👈 YE MAIN FIX HAI */
+}
+
+.time-box div {
+  background: #044E72;
+  padding: 5px ;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.time-box span {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.time-box p {
+  font-size: 12px;
+}
+
+/* BUTTON */
+.register-btn {
+  margin-top: 10px;
+  background: #044E72;
+  color: white;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.register-btn:hover {
+  background: #f5f5f5;
+  transform: scale(1.05);
+  border: #044E72 solid 2px;
+  color: #044E72;
+}
+
+/* FORM */
+.form-box {
+  background: #f5f5f5;
+  padding: 30px;
+  border-radius: 15px;
+  color: black;
+  max-width: 420px;  
+  margin: auto; 
+  z-index: 10;   /* 👈 ADD THIS */
+}
+
+.form-box h4 {
+  margin-bottom: 20px;
+}
+
+.form-box input,
+.form-box select {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+.form-box select:focus,
+.form-box input:focus {
+  outline: none !important;
+  box-shadow: none !important;
+  border: 1px solid #044E72 !important; /* normal border */
+}
+.custom-dropdown {
+  position: relative;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.dropdown-selected {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background: white;
+  cursor: pointer;
+}
+
+.dropdown-list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  max-height: 180px;
+  overflow-y: auto;
+  background: white;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  z-index: 9999;
+}
+
+.dropdown-list li {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.dropdown-list li:hover {
+  background: #044E72;
+  color: white;
+}
+.submit-btn {
+  width: 100%;
+  padding: 12px;
+  background: #044E72;
+  color: white;
+  border: none;
+  border-radius: 8px;
+}
+.submit-btn:hover {
+  width: 100%;
+  padding: 12px;
+  background: white;
+  color: #044E72;
+  border: #044E72 solid 2px;
+  border-radius: 8px;
+}
+.form-disclaimer {
+  font-size: 12px;
+  color: #777;
+  margin-top: 10px;
+  line-height: 1.5;
+}
+
+.form-terms {
+  font-size: 12px;
+  color: #777;
+  margin-top: 5px;
+  line-height: 1.5;
+}
+
+.form-terms span {
+  color: #4A9FCB; /* blue link color */
+  cursor: pointer;
+  text-decoration: underline;
+}
+/* LOGO SLIDER */
+.logo-slider {
+  position: relative;  
+  margin-top: 30px; 
+  bottom: 0;
+  width: 100%;
+  overflow: hidden;
+  background: white;
+  padding: 10px 0;
+}
+
+.logo-track {
+  display: flex;
+  gap: 40px;
+  animation: scroll 20s linear infinite;
+}
+
+.logo-track img {
+  height: 50px;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  .form-box {
+    max-width: 100%;
+    padding: 20px;
+  }
+}
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}

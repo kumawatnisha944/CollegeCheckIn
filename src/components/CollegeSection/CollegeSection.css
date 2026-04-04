@@ -1,0 +1,285 @@
+
+.college-section {
+  padding: 60px 0;
+}
+
+/* HEADING */
+.heading {
+  font-size: 32px;
+  font-weight: 700;
+  color: #044E72;
+}
+
+/* BUTTONS */
+.course-buttons {
+  margin-top: 20px;
+}
+
+.course-btn {
+  border: 1px solid #ddd;
+  padding: 10px 18px;
+  border-radius: 25px;
+  margin: 5px;
+  background: white;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.course-btn.active {
+  background: #eef2f7;
+  color: #044E72;
+  border-color: #044E72;
+}
+
+/* LEFT BOX */
+.left-box {
+  color: #044E72;
+  background: #eef2f7;
+  border-radius: 15px;
+  padding: 20px;
+}
+
+.left-box img {
+  width: 100%;
+  margin-top: 10px;
+}
+
+/* SLIDER */
+.slider-container {
+  position: relative;
+}
+
+.slider {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+
+/* CARD */
+.college-card {
+  min-width: 300px;
+  background: #eef2f7;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+.image-box {
+  position: relative;
+}
+
+.image-box img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+/* RATING */
+.rating {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background:#044E72;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+.image-box {
+  position: relative;  /* must */
+}
+
+.logo {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+
+  width: 100px;
+  height: 50px;
+
+  background: white;
+  border-radius: 0px;
+  padding: 1px;
+  border: 1px solid #eee;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+}
+
+.logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+/* BODY */
+.card-body {
+  padding: 25px 15px 15px;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  margin-top: 10px;
+}
+.course-name {
+  font-size: 14px;
+  color:gray;
+  font-weight: 500;
+  margin: 5px 0;
+}
+
+.students {
+  margin-top: 10px;
+  color: gray;
+}
+
+/* BUTTONS */
+.btn-group {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.btn-outline {
+  border: 1px solid #044E72;
+  background: transparent;
+  padding: 8px 15px;
+  border-radius: 8px;
+  color: #044E72;
+}
+
+.btn-filled {
+  background:#044E72;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 8px;
+}
+
+
+
+
+
+/* MODAL */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-box {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  width: 350px;
+}
+
+.modal-box input,
+.modal-box select {
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.submit-btn {
+  width: 100%;
+  margin-top: 15px;
+  padding: 10px;
+  background: #044E72;
+  color: white;
+  border: none;
+  border-radius: 8px;
+}
+
+.close {
+  float: right;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.mobile-tabs {
+  display: none;
+}
+
+/* MOBILE VIEW ONLY */
+@media (max-width: 768px) {
+
+  /* LEFT BOX HIDE */
+  .left-box {
+    display: none;
+  }
+
+  /* MOBILE BUTTONS */
+  .mobile-tabs {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 10px;
+    background: #f8fbff;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  }
+  
+
+  .mobile-tabs button {
+    flex: 1;
+    padding: 10px 5px;
+    border: none;
+    border-radius: 25px;
+    background: #ffffff;
+    color: #044E72;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  }
+  /* HOVER EFFECT */
+  .mobile-tabs button:hover {
+    background: #044E72;
+    color: #fff;
+    transform: scale(1.05);
+  }
+ /* ACTIVE BUTTON */
+  .mobile-tabs button.active {
+    background: linear-gradient(135deg, #044E72, #0a7db5);
+    color: #fff;
+    box-shadow: 0 4px 12px rgba(4,78,114,0.3);
+  }
+
+
+  /* SECTIONS HIDE BY DEFAULT */
+  .section {
+    display: none;
+    opacity: 0;
+    transform: translateX(50px);
+    transition: all 0.4s ease;
+  }
+
+  /* ACTIVE SECTION SHOW */
+  .section.show {
+    display: block;
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  /* SLIDER FULL WIDTH */
+  .slider-container {
+    width: 100%;
+  }
+
+}

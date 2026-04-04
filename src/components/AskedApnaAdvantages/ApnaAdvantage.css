@@ -1,0 +1,132 @@
+/* SECTION */
+.advantage-section {
+  padding-top: 45px;
+  padding-bottom: 25px;
+  background: #eef2f7;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-top: 10px;
+
+}
+
+/* HEADING */
+.advantage-heading {
+  font-size: 38px;
+  letter-spacing: 2px;
+  color: #044E72;
+  font-weight: 600;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+/* SUBTEXT */
+.advantage-subtext {
+  color: #6c6c8a;
+  font-size: 14px;
+  margin-bottom: 40px;
+}
+
+/* CARD WRAPPER */
+.advantage-cards-wrapper {
+  overflow: hidden;
+}
+
+/* CARDS ROW */
+.advantage-cards {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+}
+
+/* SINGLE CARD */
+.adv-card {
+  position: relative;
+  background: rgba(132, 206, 243, 0.3);
+  color: #044E72;
+  width: 320px;
+  min-height: 260px;
+  border-radius: 20px;
+  padding: 30px 20px;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* GRID DESIGN */
+.grid-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 120px;
+  height: 120px;
+  background-image: linear-gradient(#ffffff20 1px, transparent 1px),
+                    linear-gradient(90deg, #ffffff20 1px, transparent 1px);
+  background-size: 20px 20px;
+  opacity: 0.3;
+}
+
+/* NUMBER */
+.card-number {
+  position: absolute;
+  bottom: 90px;
+  left: 45%;
+  font-size: 60px;
+  font-weight: bold;
+  color: rgba(20, 20, 20, 0.08);
+}
+
+/* TITLE */
+.adv-card h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+/* DESC */
+.adv-card p {
+  font-size: 14px;
+  color: #4a4a4c;
+  margin-bottom: 30px;
+}
+
+/* BUTTON */
+.card-btn {
+  background: #044E72;
+  border: 2px solid #044E72 ;
+  border-radius: 4px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 60px;
+  padding: 10px 20px;
+}
+
+/* HOVER */
+.card-btn:hover {
+    background:white;
+    color: #044E72;
+    transition: all 0.3s ease;
+}
+
+/* ========================= */
+/* 📱 MOBILE RESPONSIVE */
+/* ========================= */
+
+@media (max-width: 768px) {
+
+  .advantage-cards {
+    overflow-x: auto;
+    justify-content: flex-start;
+    padding-bottom: 10px;
+    scroll-behavior: smooth;
+  }
+
+  .advantage-cards::-webkit-scrollbar {
+    display: none;
+  }
+
+  .adv-card {
+    min-width: 280px;
+    flex-shrink: 0;
+  }
+}

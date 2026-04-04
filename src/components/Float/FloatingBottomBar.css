@@ -1,0 +1,114 @@
+.floating-bottom-bar {
+  position: fixed;
+  bottom: 12px;
+
+  /* LEFT RIGHT GAP */
+  left: 10px;
+  right: 10px;
+  width: auto;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  padding: 10px 6px;
+
+  z-index: 9999;
+
+  /* GLASS EFFECT */
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  /* BORDER RADIUS */
+  border-radius: 18px;
+
+  /* SOFT BORDER */
+  border: 1px solid rgba(255, 255, 255, 0.3);
+
+  /* SHADOW (Premium feel) */
+  box-shadow: 
+    0 4px 20px rgba(0, 0, 0, 0.08),
+    0 1px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* EACH ITEM */
+.float-item {
+  flex: 1;
+  text-align: center;
+  text-decoration: none;
+  font-size: 12px;
+  color: #333;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ICON STYLE */
+.float-item svg {
+  font-size: 20px;
+  margin-bottom: 3px;
+}
+
+/* COLORS */
+.whatsapp {
+  color: #25D366;
+}
+
+.call {
+  color: #007bff;
+}
+
+.apply {
+  color: #ff5722;
+  background: none;
+  border: none;
+}
+
+.college {
+  color: #6f42c1;
+  background: none;
+  border: none;
+}
+
+/* HOVER EFFECT */
+.float-item:hover {
+  transform: scale(1.05);
+  transition: 0.2s;
+}
+.float-item {
+  flex: 1;
+  text-align: center;
+  font-size: 11px;
+ 
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 6px 4px;
+  border-radius: 12px;
+  transition: all 0.25s ease;
+}
+
+/* ICON */
+.float-item svg {
+  font-size: 18px;
+  margin-bottom: 3px;
+}
+
+/* HOVER / TAP EFFECT */
+.float-item:hover {
+  background: rgba(0, 0, 0, 0.06);
+  transform: translateY(-2px);
+}
+
+/* ONLY MOBILE */
+@media (min-width: 768px) {
+  .floating-bottom-bar {
+    display: none;
+  }
+}

@@ -1,0 +1,59 @@
+
+
+.main-title {
+  font-weight: 700;
+  color: #0a3d62;
+  margin-bottom: 20px;
+}
+
+.intro-text {
+  font-size: 15px;
+  color: #555;
+  margin-bottom: 25px;
+}
+
+.policy-section {
+  margin-bottom: 25px;
+}
+
+.policy-section h3 {
+  color: #044E72;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.policy-section p,
+.policy-section li {
+  font-size: 14px;
+  color: #444;
+  line-height: 1.6;
+}
+
+.policy-section ul {
+  padding-left: 20px;
+}
+
+.update-text {
+  text-align: right;
+  font-size: 13px;
+  color: #888;
+  margin-top: 30px;
+}
+
+
+/* ❌ button */
+.close-btnn {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  font-size: 24px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #333;
+  transition: 0.3s;
+}
+
+.close-btnn:hover {
+  color: red;
+  transform: scale(1.2);
+}

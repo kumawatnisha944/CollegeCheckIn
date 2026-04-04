@@ -1,0 +1,90 @@
+.apnaadvantage-section {
+  padding: 10px 0 40px;
+  max-width: 1000px;   /* NEW */
+  margin: auto;        /* center align */
+}
+
+.adv-heading {
+  font-size: 34px;
+  font-weight: 700;
+  color: #044e72;
+  margin-bottom: 40px;
+}
+
+/* MAIN BOX */
+.adv-boxx {
+  background: linear-gradient(135deg, #f7f9fc, #e9edf5);
+  border-radius: 18px;
+  padding: 30px;
+  color: #044e72;
+}
+
+/* TABLE */
+.adv-table {
+  width: 100%;
+}
+
+.adv-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  align-items: center;
+  padding: 8px 0px;
+}
+
+/* HEADER */
+.adv-header {
+  font-weight: 600;
+  color: #044e72;
+  font-weight: bold;
+  margin-bottom: 5px;
+  
+}
+
+.adv-cell {
+  text-align: center;
+}
+
+.feature {
+  text-align: left;
+  color: black;
+  font-weight: bold;
+}
+
+/* RIGHT COLUMN SAME LINE (NO CARD LOOK) */
+.highlight {
+  color: #044e72;
+  font-weight: bold;
+}
+
+/* ICONS */
+.tick {
+  color: #00d084;
+  font-size: 18px;
+}
+
+.cross {
+  color: #ff4d4f;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+
+  .adv-row {
+    grid-template-columns: 1.5fr 1fr 1fr 1fr; /* thoda adjust */
+    font-size: 14px; /* text chhota */
+  }
+.adv-header .adv-cell {
+    font-size: 14px;
+    line-height: 1.2;
+    word-break: break-word;   /* 🔥 main fix */
+    padding: 0 5px;
+  }
+.apnaadvantage-section {
+    padding: 5px 10px 20px;
+  }
+
+  .adv-boxx {
+    padding: 15px;
+  }
+}

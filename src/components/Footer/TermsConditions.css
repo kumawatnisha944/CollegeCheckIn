@@ -1,0 +1,44 @@
+
+
+.main-heading {
+  font-size: 32px;
+  font-weight: bold;
+  color: #044E72;
+  margin-bottom: 10px;
+}
+
+.update-text {
+  font-size: 14px;
+  color: gray;
+  margin-bottom: 30px;
+}
+
+.terms-content h3 {
+  margin-top: 20px;
+  color: #044E72;
+  font-size: 20px;
+}
+
+.terms-content p {
+  font-size: 15px;
+  color: #444;
+  line-height: 1.7;
+}
+
+
+/* ❌ button */
+.close-btnn {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  font-size: 24px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #333;
+  transition: 0.3s;
+}
+
+.close-btnn:hover {
+  color: red;
+  transform: scale(1.2);
+}

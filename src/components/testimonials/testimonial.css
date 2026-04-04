@@ -1,0 +1,160 @@
+/* SECTION */
+.testimonial-section {
+  padding: 10px 0 70px;
+  background-color: #ffffff;
+}
+
+/* HEADING */
+.testimonial-heading {
+  font-size: 34px;
+  font-weight: 600;
+  color: #044e72;
+  margin-bottom: 50px;
+}
+
+/* CARD */
+.testimonial-card {
+  background: #f7f9fc;
+  border-radius: 12px;
+  padding: 25px;
+  height: 100%;
+  position: relative;
+  transition: 0.3s ease;
+}
+
+/* HOVER EFFECT */
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  border: #044e72 solid 2px;
+ box-shadow: 0 8px 20px rgba(4, 78, 114, 0.15);
+}
+
+/* QUOTE ICON */
+.quote {
+  font-size: 40px;
+  color: #044e72;
+  margin-bottom: 10px;
+}
+.quote-css::before {
+  content: "❝";
+  font-size: 28px;
+  color: #044e72;
+}
+/* TEXT */
+.testimonial-text {
+  font-size: 15px;
+  color: #5f6c7b;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* USER */
+.testimonial-user {
+  font-size: 14px;
+  font-weight: 500;
+  color: #1f2d3d;
+}
+
+.testimonial-user span {
+  font-weight: 400;
+  color: #6b7280;
+}
+/* DESKTOP GRID */
+.testimonial-scroll {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+/* RESPONSIVE */
+/* BUTTON WRAPPER */
+.testimonial-btn-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+/* BUTTON STYLE */
+.enroll-btn {
+  background-color: #044e72;   /* dark blue like image */
+  color: #fff;
+  border: none;
+  padding: 14px 35px;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* HOVER EFFECT */
+.enroll-btn:hover {
+  background-color: white;
+  color: #044e72;
+  border: #044e72 solid 2px;
+  transform: translateY(-2px);
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+  .testimonial-heading {
+    font-size: 40px;
+    font-weight: bold;
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  .testimonial-section {
+    padding: 15px 15px 50px;
+  }
+
+  .testimonial-heading {
+    font-size: 30px;
+    margin-bottom: 30px;
+  }
+
+  .testimonial-card {
+    padding: 20px;
+    transform: none !important;  
+  }
+
+  .testimonial-text {
+    font-size: 16px;
+  }
+.testimonial-scroll {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: visible;
+    gap: 15px;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 10px;
+  }
+
+  .testimonial-scroll::-webkit-scrollbar {
+    display: none;
+  }
+
+  .testimonial-item {
+    min-width: 280px;   /* 👈 FIXED WIDTH */
+    max-width: 280px;   /* 👈 IMPORTANT */
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+  }
+
+  .testimonial-card {
+    width: 100%;
+  }
+
+  .testimonial-text {
+    white-space: normal;   /* 👈 text wrap */
+    word-break: break-word;
+  }
+  .testimonial-btn-wrapper {
+    margin-top: 25px;
+  }
+
+  .enroll-btn {
+    width: 80%;
+    font-size: 17px;
+  }
+}
