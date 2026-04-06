@@ -10,7 +10,7 @@ function Footer() {
         {/* LINKS */}
         <div className="footer-links text-center text-md-start">
           <p>
-            © 2026 Apna | All rights-reserved
+            © 2026 College Check In | All rights-reserved
            <span onClick={() => navigate("/privacy-policy")}>Privacy Policy</span>
             <span onClick={() => navigate("/terms")}> Terms & Conditions</span>
             <span onClick={() => navigate("/rewards")}> Rewards T&C</span>
