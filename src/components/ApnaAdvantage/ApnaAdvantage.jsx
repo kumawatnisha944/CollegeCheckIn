@@ -7,7 +7,6 @@ const ApnaAdvantage = () => {
       <h2 className="apna-adv-heading text-center">
         Online degree + College Check In
       </h2>
-
      <div className="adv-boxx">
   <div className="adv-table">
 
