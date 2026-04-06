@@ -17,7 +17,7 @@ function App() {
   const [showForm, setShowForm] = useState(false);
 
   return (
-    <Router basename={import.meta.env.BASE_URL}>
+    <Router>
       <Routes>
 
         {/* HOME PAGE */}
