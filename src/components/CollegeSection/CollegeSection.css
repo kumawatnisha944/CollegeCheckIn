@@ -47,18 +47,19 @@
 /* SLIDER */
 .slider-container {
   position: relative;
+  overflow: hidden; 
 }
 
 .slider {
   display: flex;
-  gap: 20px;
+  gap: 15px;
   overflow-x: auto;
   scroll-behavior: smooth;
 }
 
 /* CARD */
 .college-card {
-  min-width: 300px;
+  min-width: 280px;
   background: #eef2f7;
   border-radius: 15px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.1);
@@ -161,7 +162,13 @@
   padding: 8px 15px;
   border-radius: 8px;
 }
-
+.college-section .row {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+.slider::-webkit-scrollbar {
+  display: none;
+}
 
 
 
