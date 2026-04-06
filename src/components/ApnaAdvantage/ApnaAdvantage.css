@@ -1,11 +1,9 @@
 .apnaadvantage-section {
-  padding: 10px 0 40px;
+  padding: 10px 15px 40px;
   max-width: 1000px;   /* NEW */
-  margin: 0 auto !important;      /* center align */
+  margin: auto;        /* center align */
 }
-.container {
-  padding-top: 0 !important;
-}
+
 .adv-heading {
   font-size: 34px;
   font-weight: 700;
