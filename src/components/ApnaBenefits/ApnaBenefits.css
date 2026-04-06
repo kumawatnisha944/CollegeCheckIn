@@ -1,7 +1,7 @@
 /* SECTION */
 .benefits-section {
   background-color: #f7f9fc;
-  padding: 20px 0;
+  padding: 20px 20px 0px 20px;
   color: #044E72;
 }
 
@@ -176,11 +176,13 @@
     flex-wrap: nowrap !important;
     overflow-x: auto;
     gap: 12px;
-    padding: 0 0px;
+    padding: 0 12px;
     margin: 0 !important;
     scroll-padding-left: 12px;   /* ⭐ ADD THIS */
   }
-
+.benefits-section .col-md-4:first-child {
+  margin-left: 460px;
+}
   .benefits-section .col-md-4 {
     flex: 0 0 78% !important;   /* 👈 pehle 85% tha → ab chhota */
     max-width: 78% !important;
