@@ -1,8 +1,8 @@
 .apnaadvantage-section {
   padding: 10px 15px 20px;
   max-width: 1000px;   /* NEW */
-  margin: auto;    
-  overflow: hidden;    /* center align */
+  margin: 0 auto;    
+  overflow: visible;    /* center align */
 }
 
 .apna-adv-heading {
@@ -73,7 +73,8 @@
 @media (max-width: 768px) {
 
   .adv-row {
-    grid-template-columns: 1.5fr 1fr 1fr 1fr; /* thoda adjust */
+     display: grid;
+    grid-template-columns:40% 20% 20% 20%; /* thoda adjust */
     font-size: 14px; /* text chhota */
   }
 .adv-header .adv-cell {

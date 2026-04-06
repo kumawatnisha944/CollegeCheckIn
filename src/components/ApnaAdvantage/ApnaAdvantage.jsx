@@ -1,6 +1,5 @@
 import React from "react";
 import "./ApnaAdvantage.css";
-import "bootstrap/dist/css/bootstrap.min.css";
 
 const ApnaAdvantage = () => {
   return (
