@@ -5,7 +5,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 const ApnaAdvantage = () => {
   return (
     <div className="apnaadvantage-section">
-      <h2 className="adv-heading text-center">
+      <h2 className="apna-adv-heading text-center">
         Online degree + College Check In
       </h2>
 

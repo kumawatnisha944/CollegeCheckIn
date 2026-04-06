@@ -1,14 +1,16 @@
 .apnaadvantage-section {
-  padding: 10px 15px 40px;
+  padding: 10px 15px 20px;
   max-width: 1000px;   /* NEW */
-  margin: auto;        /* center align */
+  margin: auto;    
+  overflow: hidden;    /* center align */
 }
 
-.adv-heading {
+.apna-adv-heading {
   font-size: 34px;
   font-weight: 700;
   color: #044e72;
-  margin-bottom: 40px;
+  margin-bottom: 20px; /* reduce gap */
+  margin-top: 0;
 }
 
 /* MAIN BOX */
