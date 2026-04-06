@@ -3,7 +3,7 @@
   color: rgb(8, 8, 8);
   padding: 50px 0;
   position: relative;
-  overflow: visible;   /* 👈 CHANGE THIS */
+  overflow: hidden;   /* 👈 CHANGE THIS */
   margin-top: 0px;  
 }
 
