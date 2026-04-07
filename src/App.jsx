@@ -23,7 +23,7 @@ function App() {
         {/* HOME PAGE */}
         <Route path="/" element={
           <>
-            <Banner />
+            <Banner setShowForm={setShowForm} />
             <Advantages showForm={showForm} setShowForm={setShowForm} />
             <CollegeSection setShowForm={setShowForm}/>
             <ApnaAdvantage />

@@ -2,7 +2,9 @@ import React, { useState } from "react";
 import "./Advantages.css";
 
 const Advantages = ({ showForm, setShowForm }) => {
-
+const [name, setName] = useState("");
+const [phone, setPhone] = useState("");
+const [email, setEmail] = useState("");
   // 👉 FIX: Hooks ko component ke andar shift kiya
   const [collegeOpen, setCollegeOpen] = useState(false);
   const [courseOpen, setCourseOpen] = useState(false);
@@ -37,7 +39,39 @@ const Advantages = ({ showForm, setShowForm }) => {
     "MCA",
     "Other"
   ];
+const handleSubmit = async () => {
+  const data = {
+    name: name,
+    email: email,
+    phone: phone,
+    course: selectedCourse,
+    message: "Admission enquiry", 
+    query_for: "Admission"
+  };
 
+  try {
+    const res = await fetch("https://admin.collegecheckin.com/api/v1/home/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(data)
+    });
+
+    const result = await res.json();
+    console.log(result);
+
+    if(result.success){
+      alert("Form submitted successfully ✅");
+    } else {
+      alert(result.message);
+    }
+
+  } catch (error) {
+    console.error(error);
+    alert("Error submitting form ❌");
+  }
+};
   return (
     <>
       <div className="advantages-section container">
@@ -120,9 +154,16 @@ const Advantages = ({ showForm, setShowForm }) => {
 
             <h4>Admission Open for 2026</h4>
 
-            <input type="text" placeholder="Full Name*" />
-            <input type="text" placeholder="Mobile Number*" />
-
+            <input type="text" placeholder="Full Name*" value={name}
+  onChange={(e) => setName(e.target.value)}/>
+            <input type="text" placeholder="Mobile Number*" value={phone}
+  onChange={(e) => setPhone(e.target.value)}/>
+              <input 
+  type="email" 
+  placeholder="Enter your email" 
+  value={email}
+  onChange={(e) => setEmail(e.target.value)}
+/>
             {/* COLLEGE DROPDOWN */}
             <div className="custom-dropdown">
               <div
@@ -175,7 +216,7 @@ const Advantages = ({ showForm, setShowForm }) => {
               )}
             </div>
 
-            <button className="submit-btn">Submit</button>
+            <button className="submit-btn" onClick={handleSubmit}>Submit</button>
 
             {/* DISCLAIMER TEXT */}
             <p className="form-disclaimer">

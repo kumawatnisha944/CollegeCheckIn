@@ -6,8 +6,10 @@ const logos = Array.from({ length: 12 }, (_, i) =>
   new URL(`./lg${i + 1}.png`, import.meta.url).href
 );
 
-const Banner = () => {
-
+const Banner = ({ setShowForm }) => {
+const [name, setName] = useState("");
+const [phone, setPhone] = useState("");
+const [email, setEmail] = useState("");
   // TIMER
   const [time, setTime] = useState({
     hrs: 11,
@@ -72,7 +74,39 @@ const courses = [
 
     return () => clearInterval(interval);
   }, []);
+const handleSubmit = async () => {
+  const data = {
+    name: name,
+    email: email,
+    phone: phone,
+    course: selectedCourse,
+    message: "Admission enquiry", 
+    query_for: "Admission"
+  };
 
+  try {
+    const res = await fetch("https://admin.collegecheckin.com/api/v1/home/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(data)
+    });
+
+    const result = await res.json();
+    console.log(result);
+
+    if(result.success){
+      alert("Form submitted successfully ✅");
+    } else {
+      alert(result.message);
+    }
+
+  } catch (error) {
+    console.error(error);
+    alert("Error submitting form ❌");
+  }
+};
   return (
     <section className="banner">
       <div className="container">
@@ -111,7 +145,7 @@ const courses = [
               <p className="timer-title">Application closes in</p>
             </div>
 
-            <button className="register-btn">
+            <button className="register-btn" onClick={() => setShowForm(true)}>
               Register Now →
             </button>
           </div>
@@ -122,8 +156,17 @@ const courses = [
 
     <h4>Admission Open for 2026</h4>
 
-    <input type="text" placeholder="Your Name" />
-    <input type="text" placeholder="Enter your mobile number" />
+    <input type="text" placeholder="Your Name"  value={name}
+  onChange={(e) => setName(e.target.value)} />
+    <input type="text" placeholder="Enter your mobile number"  value={phone}
+  onChange={(e) => setPhone(e.target.value)}/>
+  <input 
+  type="email" 
+  placeholder="Enter your email" 
+  value={email}
+  onChange={(e) => setEmail(e.target.value)}
+/>
+
 
     {/* COLLEGE DROPDOWN */}
     <div className="custom-dropdown">
@@ -177,7 +220,7 @@ const courses = [
       )}
     </div>
 
-    <button className="submit-btn">Submit</button>
+    <button className="submit-btn" onClick={handleSubmit}>Submit</button>
     {/* DISCLAIMER TEXT */}
 <p className="form-disclaimer">
   I authorise a representative to contact me via Email/SMS/WhatsApp/Call. 
